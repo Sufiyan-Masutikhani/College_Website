@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="text-center bg-light py-5 mb-4" data-aos="fade-up">
+    <h1 class="display-4 fw-bold">Welcome to NIE College</h1>
+    <p class="lead mb-4">Empowering students for a brighter future with world-class education and opportunities.</p>
+    <a href="{% url 'courses' %}" class="btn btn-primary btn-lg">Explore Courses</a>
+</section>
+
+<div id="collegeCarousel" class="carousel slide mb-5 shadow" data-bs-ride="carousel" data-aos="zoom-in">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/nie1.jpg' %}" class="d-block w-100" alt="Campus 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/nie2.jpg' %}" class="d-block w-100" alt="Campus 2">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/nie3.jpg' %}" class="d-block w-100" alt="Campus 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#collegeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#collegeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<section class="text-center py-4" data-aos="fade-up">
+    <h2>Join NIE College Today!</h2>
+    <p>Shape your career with expert guidance and world-class infrastructure.</p>
+    <a href="{% url 'contact' %}" class="btn btn-success btn-lg">Get in Touch</a>
+</section>
+
+{% endblock %}

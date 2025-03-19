@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2 class="my-4" data-aos="fade-right">Our Courses</h2>
+<div class="row">
+    {% for course in courses %}
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.name }}</h5>
+                    <p class="card-text">{{ course.description }}</p>
+                    <p><strong>Duration:</strong> {{ course.duration }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
